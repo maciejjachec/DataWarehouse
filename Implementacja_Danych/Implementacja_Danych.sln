@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Implementacja_Danych", "Implementacja_Danych\Implementacja_Danych.dtproj", "{BF1C803F-8AE2-4EA8-BC9B-93B3CDE6ACBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF1C803F-8AE2-4EA8-BC9B-93B3CDE6ACBE}.Development|Default.ActiveCfg = Development
+		{BF1C803F-8AE2-4EA8-BC9B-93B3CDE6ACBE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19934926-84AF-4263-92D3-A43A566C0ACA}
+	EndGlobalSection
+EndGlobal

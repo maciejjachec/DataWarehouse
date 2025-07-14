@@ -1,0 +1,2683 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/28/2024 2:30:49 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WIN1-284"
+  DTS:CreatorName="STUDENT\189967"
+  DTS:DTSID="{6807A78A-CE82-4D16-91FB-66999CC700E1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{566FC00B-C975-40E3-B1B8-9ECB0DA40CD0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.110.97.4.AdventureWorksDW2019.189967]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5BFE9D56-4640-4899-AD89-137DA73C4C98}"
+      DTS:ObjectName="10.110.97.4.AdventureWorksDW2019.189967">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.110.97.4;User ID=189967;Initial Catalog=AdventureWorksDW2019;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa99vkP0BrEuC1Lnasq+GLAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADEelL/mQqgEX97N22HXN5FAAAAAASAAACgAAAAEAAAAFsJqJ0DXVDbpsZwYz7GzgkgAAAAX9P1kugAEjwYJ4wzaUC45PyMjHBbGENM7BO0UP77eJYUAAAA2VG3I1CrS3RpQj1/qTEyroMIpbk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.110.97.4.HD_Projekt_Snowflake.189967]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5E85ECA1-9DA8-4CFE-A623-55D26C7ABACE}"
+      DTS:ObjectName="10.110.97.4.HD_Projekt_Snowflake.189967">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.110.97.4;User ID=189967;Initial Catalog=HD_Projekt_Snowflake;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa99vkP0BrEuC1Lnasq+GLAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAATaWTUj/Yvvvcm+SHlVRKSAAAAAASAAACgAAAAEAAAAGcl4Sh/11olAOhFUjbsyUQgAAAAPpINjt1EVMFF8TXpl6zA58GjKXP7oRfk+lq2/6Fnm9EUAAAAM57LaXlgAbGSrx4SIes+AtTbWfc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{DBA3FCB5-8564-470A-8AF0-397D61FF2A87}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\189967\Desktop\Inventory.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C5606261-44FF-4355-BA0B-B1147B842DE1}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\189967\Desktop\Inventory.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9B8EF64A-A93E-412E-BC75-504B4BCE05E2}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\189967\Desktop\Implementacja_OLEDB.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYear"
+              DTS:DTSID="{9CC84A8C-3F36-4589-A678-65782C98EE14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthNumberOfYear"
+              DTS:DTSID="{94C9CBDA-052F-40B7-9E7D-7B69BE8A1E5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfMonth"
+              DTS:DTSID="{C05D1216-99D4-45DF-A98C-1D0B33C8DDB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{69ED2F49-2D9A-43B6-9262-FD5C8D1A04BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FullDateAlternateKey"
+              DTS:DTSID="{BA8C7AB7-D43B-4061-A5CD-759587BFBD11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfWeek"
+              DTS:DTSID="{CC6BC9EC-3275-4360-8887-93654F6EA770}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishDayNameOfWeek"
+              DTS:DTSID="{A4167027-C175-4A66-9A6E-0E04012C9DDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishDayNameOfWeek"
+              DTS:DTSID="{EA3B9F63-F44F-4757-82B7-D0ED95B5082F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchDayNameOfWeek"
+              DTS:DTSID="{D4A7DAAC-621B-4207-AF10-FF5EAC8FA038}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfYear"
+              DTS:DTSID="{58739585-C324-408A-88FF-FFCD264C6B7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekNumberOfYear"
+              DTS:DTSID="{DB3BD5DE-E78D-4C51-9744-0531CBA163CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishMonthName"
+              DTS:DTSID="{D4A05975-F615-4E8D-A3FA-2B7186A5F60A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishMonthName"
+              DTS:DTSID="{BEE8279D-040F-4CD3-88F4-373C9075973E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchMonthName"
+              DTS:DTSID="{39155E7D-1C97-4BC4-8400-C5CBA8188719}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarQuarter"
+              DTS:DTSID="{D09FE538-0271-47AC-8828-5E1925221709}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarSemester"
+              DTS:DTSID="{7F5B6F41-5DBF-429E-BBCE-9E7B01974C42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalQuarter"
+              DTS:DTSID="{EC9911AB-6F05-47B8-A88B-7452AA339658}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalYear"
+              DTS:DTSID="{D7CCAF22-55D7-4F87-A945-A5234D393F19}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalSemester"
+              DTS:DTSID="{0FBA982E-942C-4021-88FB-D83102D91142}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1C449363-773A-4928-98C1-BFDFCDF7E48D}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\189967\Desktop\Nowy dokument tekstowy.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{1A2E3115-5846-485B-ACA4-16BA97C0C924}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FullDateAlternateKey"
+              DTS:DTSID="{25F18731-972C-4589-A6E9-A324A597F6B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfWeek"
+              DTS:DTSID="{DF60C44D-01D9-4895-A444-3AFCA55D29E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishDayNameOfWeek"
+              DTS:DTSID="{A011F5B3-A698-4CE0-9E8A-3EFD98859450}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishDayNameOfWeek"
+              DTS:DTSID="{8EE8C894-0902-4E16-94A2-8CC65D0AAF6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchDayNameOfWeek"
+              DTS:DTSID="{11388F9C-9E21-48BF-9AF4-6246BD712EFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfMonth"
+              DTS:DTSID="{439F0606-EA90-46A9-A889-7C87E9C8F842}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfYear"
+              DTS:DTSID="{F8CE7C9C-5C34-4629-BD34-B2DBA8B0CE20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekNumberOfYear"
+              DTS:DTSID="{1CC120CE-D51E-47CA-AB5B-432DB4824532}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishMonthName"
+              DTS:DTSID="{539F4D2A-81A5-49C9-A4B3-3E0FB1D71330}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishMonthName"
+              DTS:DTSID="{D5ACEAEE-DAAF-4EE2-BC0F-7A9BB931A708}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchMonthName"
+              DTS:DTSID="{C09DAE6A-62E6-4D98-B64A-9BC61FCA0D9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthNumberOfYear"
+              DTS:DTSID="{BFAA4016-8435-42C6-BA79-011BE16D2663}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarQuarter"
+              DTS:DTSID="{21430C81-4B6F-4D1D-923F-BFA033992CC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYear"
+              DTS:DTSID="{60B151B9-C419-4D18-AE5A-BFA46E548381}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarSemester"
+              DTS:DTSID="{C304F551-190D-4759-AD06-2ADCB2452206}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalQuarter"
+              DTS:DTSID="{440670BE-255C-4CE1-9D1F-42C7EE7AD6C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalYear"
+              DTS:DTSID="{07D23563-97F1-4A3A-B078-A7311418F3C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalSemester"
+              DTS:DTSID="{4E20B49D-9CAA-4A8F-BD88-49241EA20FAB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CEA48AFA-5327-4F9A-93A8-D25B7AD62AE3}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\189967\Desktop\Implementacja_Danych_OLEDB.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{A68CA662-A007-47E5-A941-68082CCDAA8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FullDateAlternateKey"
+              DTS:DTSID="{6214688E-2AC8-48DB-B283-6246EDB07552}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfWeek"
+              DTS:DTSID="{9790332E-7051-49C4-8F6D-15EE09696A60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishDayNameOfWeek"
+              DTS:DTSID="{1ED1F4BB-D1E5-40EC-8CBD-1D1E7C58680F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishDayNameOfWeek"
+              DTS:DTSID="{B9DBFFC8-DD01-4A11-8F32-E5AB5F91A87D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchDayNameOfWeek"
+              DTS:DTSID="{7352606A-1BE2-4626-847C-40F1CB70D53D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfMonth"
+              DTS:DTSID="{B836F4A3-0E75-4BDF-AA57-E79E8CEC9DFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfYear"
+              DTS:DTSID="{CB358E12-27B0-4B1C-89B6-C1512576731E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekNumberOfYear"
+              DTS:DTSID="{FDD752D0-CEEA-4935-9BEE-C0F0F85D01AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishMonthName"
+              DTS:DTSID="{A3D0C60C-B50A-4E5C-A385-A1922EE328F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishMonthName"
+              DTS:DTSID="{BA6E1CB8-140D-4636-A83B-6D8D146FF818}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchMonthName"
+              DTS:DTSID="{EEFED1D7-E5F7-4119-84E7-86ECBC20805F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthNumberOfYear"
+              DTS:DTSID="{DAE9D588-94C8-48EF-BFA0-7D8E68BBDE5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarQuarter"
+              DTS:DTSID="{1A9663C3-C6B7-4619-9588-385C50E85942}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYear"
+              DTS:DTSID="{8A09C019-10B6-4B14-9FD7-82B6EFDA753C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarSemester"
+              DTS:DTSID="{62D27661-2147-4B3B-9B8A-0B241B13D58F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalQuarter"
+              DTS:DTSID="{4F7F4A81-B472-4A0B-B583-318211F40962}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalYear"
+              DTS:DTSID="{D61390BD-6139-4D8A-BD77-B60FA0DEE2EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalSemester"
+              DTS:DTSID="{A077FF42-FB0D-44DE-BC1C-1D11F7292382}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Implementacja_FlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2D8FE350-18AF-47B8-92C6-6657CBC60BCF}"
+      DTS:ObjectName="Implementacja_FlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\189967\Desktop\Implementacja_Danych_OLEDB.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{5DD86561-2DE8-4198-86E3-2E7A404CF5E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FullDateAlternateKey"
+              DTS:DTSID="{B7725C03-5356-48A2-9D23-FEA60C913A51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfWeek"
+              DTS:DTSID="{2827CFAC-37E9-43AB-AA33-8F0D998FF4CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishDayNameOfWeek"
+              DTS:DTSID="{6766CC68-DCFE-4167-9C39-31194DA028F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishDayNameOfWeek"
+              DTS:DTSID="{A185BC94-17AF-4A53-873B-EF4FE6F76C5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchDayNameOfWeek"
+              DTS:DTSID="{5C5E5E41-9709-44EF-9756-7FDB58AC1516}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfMonth"
+              DTS:DTSID="{555BBDB4-FCB2-4CB5-969B-E19262FC963B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNumberOfYear"
+              DTS:DTSID="{641A72B4-1152-41A5-84FA-A3010C397C5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekNumberOfYear"
+              DTS:DTSID="{95D30BFC-A465-4171-BC83-8CC35B92E5E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EnglishMonthName"
+              DTS:DTSID="{3EC0C9DF-9A0A-43F5-8215-F0AF88D08794}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SpanishMonthName"
+              DTS:DTSID="{D91876AA-F506-4525-A301-2F1A4290C301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FrenchMonthName"
+              DTS:DTSID="{17D8A6B9-80FA-46E1-8DD3-2F4C14EF97E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthNumberOfYear"
+              DTS:DTSID="{31B44C5B-E8FE-4AF7-91F9-91EC66C70CB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarQuarter"
+              DTS:DTSID="{54687A85-E24C-4367-8D4E-D4A5B7784E4A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYear"
+              DTS:DTSID="{D1FB81FF-553D-495E-9C57-94C303DA7C16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarSemester"
+              DTS:DTSID="{3BC3CB83-D9F4-4CF0-BDA8-304073806244}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalQuarter"
+              DTS:DTSID="{8D3BF195-1176-4762-8EF2-FBBC93E0BAC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalYear"
+              DTS:DTSID="{63666ED9-F5AE-4111-8C16-90E96AF197D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FiscalSemester"
+              DTS:DTSID="{4D00A695-02A1-44B6-BFD2-BDF55C2AD02E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Implementacja_Danych_Excel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{932C2A60-E335-4450-A0B3-CB70DD2693C2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Implementacja_Danych_Excel"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Implementacja_Danych_Excel\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Inventory_Worksheet</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_Excel\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[LocationID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[LocationID]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[LocationID]"
+                      name="LocationID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Shelf]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Shelf]"
+                      length="255"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Shelf]"
+                      name="Shelf"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Bin]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Bin]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Bin]"
+                      name="Bin"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[PhysicalCount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[PhysicalCount]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[PhysicalCount]"
+                      name="PhysicalCount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[LocationID]"
+                      dataType="r8"
+                      name="LocationID" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Shelf]"
+                      dataType="wstr"
+                      length="255"
+                      name="Shelf" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Bin]"
+                      dataType="r8"
+                      name="Bin" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[PhysicalCount]"
+                      dataType="r8"
+                      name="PhysicalCount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      dataType="r8"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[LocationID]"
+                      dataType="r8"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[LocationID]"
+                      name="LocationID" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Shelf]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Shelf]"
+                      name="Shelf" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Bin]"
+                      dataType="r8"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Bin]"
+                      name="Bin" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[PhysicalCount]"
+                      dataType="r8"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[PhysicalCount]"
+                      name="PhysicalCount" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Implementacja_Danych_Excel\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Implementacja_Excel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.110.97.4.HD_Projekt_Snowflake.189967]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.110.97.4.HD_Projekt_Snowflake.189967]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedDataType="r8"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LocationID]"
+                      cachedDataType="r8"
+                      cachedName="LocationID"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[LocationID]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Shelf]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Shelf"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Shelf]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Shelf]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Bin]"
+                      cachedDataType="r8"
+                      cachedName="Bin"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Bin]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[Bin]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PhysicalCount]"
+                      cachedDataType="r8"
+                      cachedName="PhysicalCount"
+                      externalMetadataColumnId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhysicalCount]"
+                      lineageId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output].Columns[PhysicalCount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      dataType="r8"
+                      name="LocationID" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Shelf]"
+                      dataType="wstr"
+                      length="255"
+                      name="Shelf" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Bin]"
+                      dataType="r8"
+                      name="Bin" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PhysicalCount]"
+                      dataType="r8"
+                      name="PhysicalCount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Implementacja_Danych_Excel.Paths[Excel Source Output]"
+              endId="Package\Implementacja_Danych_Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Implementacja_Danych_Excel\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Implementacja_Danych_FlatFile"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6F9A4A40-2C00-442D-AFD8-25DA9B0F0A32}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Implementacja_Danych_FlatFile"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Implementacja_Danych_FlatFile\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[FullDateAlternateKey]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FullDateAlternateKey]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[FullDateAlternateKey]"
+                      name="FullDateAlternateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfWeek]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfMonth]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[WeekNumberOfYear]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WeekNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[WeekNumberOfYear]"
+                      name="WeekNumberOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[MonthNumberOfYear]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[MonthNumberOfYear]"
+                      name="MonthNumberOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarQuarter]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarYear]"
+                      name="CalendarYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FullDateAlternateKey]"
+                      dataType="dbDate"
+                      name="FullDateAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfWeek]"
+                      dataType="ui1"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EnglishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SpanishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FrenchDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfMonth]"
+                      dataType="ui1"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayNumberOfYear]"
+                      dataType="i2"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WeekNumberOfYear]"
+                      dataType="ui1"
+                      name="WeekNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SpanishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MonthNumberOfYear]"
+                      dataType="ui1"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CalendarSemester]"
+                      dataType="ui1"
+                      name="CalendarSemester" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FiscalQuarter]"
+                      dataType="ui1"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FiscalYear]"
+                      dataType="i2"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FiscalSemester]"
+                      dataType="ui1"
+                      name="FiscalSemester" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.110.97.4.HD_Projekt_Snowflake.189967]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.110.97.4.HD_Projekt_Snowflake.189967]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FullDateAlternateKey]"
+                      cachedDataType="date"
+                      cachedName="FullDateAlternateKey"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDateAlternateKey]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[FullDateAlternateKey]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfWeek]"
+                      cachedDataType="i1"
+                      cachedName="DayNumberOfWeek"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfWeek]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfMonth]"
+                      cachedDataType="i1"
+                      cachedName="DayNumberOfMonth"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfMonth]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfYear]"
+                      cachedDataType="i2"
+                      cachedName="DayNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[DayNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeekNumberOfYear]"
+                      cachedDataType="i1"
+                      cachedName="WeekNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[WeekNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthNumberOfYear]"
+                      cachedDataType="i1"
+                      cachedName="MonthNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[MonthNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CalendarQuarter]"
+                      cachedDataType="i1"
+                      cachedName="CalendarQuarter"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
+                      cachedDataType="i2"
+                      cachedName="CalendarYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output].Columns[CalendarYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDateAlternateKey]"
+                      dataType="dbTimeStamp"
+                      name="FullDateAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfWeek]"
+                      dataType="i2"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishDayNameOfWeek]"
+                      codePage="1250"
+                      dataType="str"
+                      length="9"
+                      name="EnglishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpanishDayNameOfWeek]"
+                      codePage="1250"
+                      dataType="str"
+                      length="9"
+                      name="SpanishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FrenchDayNameOfWeek]"
+                      codePage="1250"
+                      dataType="str"
+                      length="8"
+                      name="FrenchDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfMonth]"
+                      dataType="i2"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfYear]"
+                      dataType="i2"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekNumberOfYear]"
+                      dataType="i2"
+                      name="WeekNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishMonthName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="8"
+                      name="EnglishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpanishMonthName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="7"
+                      name="SpanishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FrenchMonthName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="7"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthNumberOfYear]"
+                      dataType="i2"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      dataType="i2"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarSemester]"
+                      dataType="i2"
+                      name="CalendarSemester" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalQuarter]"
+                      dataType="i2"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYear]"
+                      dataType="i2"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalSemester]"
+                      dataType="i2"
+                      name="FiscalSemester" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Implementacja_Danych_FlatFile.Paths[Flat File Source Output]"
+              endId="Package\Implementacja_Danych_FlatFile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Implementacja_Danych_FlatFile\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Implementacja_Danych_OLEDB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DBFC969B-9B8F-4214-BB2C-297F6F2CBF90}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Implementacja_Danych_OLEDB"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Implementacja_Danych_OLEDB\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FullDateAlternateKey]"
+                      cachedDataType="dbDate"
+                      cachedName="FullDateAlternateKey"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FullDateAlternateKey]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullDateAlternateKey]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[DayNumberOfWeek]"
+                      cachedDataType="ui1"
+                      cachedName="DayNumberOfWeek"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfWeek]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[EnglishDayNameOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="EnglishDayNameOfWeek"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EnglishDayNameOfWeek]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishDayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[SpanishDayNameOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="SpanishDayNameOfWeek"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpanishDayNameOfWeek]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishDayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FrenchDayNameOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="FrenchDayNameOfWeek"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FrenchDayNameOfWeek]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchDayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[DayNumberOfMonth]"
+                      cachedDataType="ui1"
+                      cachedName="DayNumberOfMonth"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfMonth]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[DayNumberOfYear]"
+                      cachedDataType="i2"
+                      cachedName="DayNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[WeekNumberOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="WeekNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WeekNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[WeekNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[EnglishMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="EnglishMonthName"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EnglishMonthName]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishMonthName]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[SpanishMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="SpanishMonthName"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpanishMonthName]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishMonthName]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FrenchMonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="FrenchMonthName"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FrenchMonthName]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchMonthName]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[MonthNumberOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="MonthNumberOfYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[MonthNumberOfYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[CalendarQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="CalendarQuarter"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[CalendarYear]"
+                      cachedDataType="i2"
+                      cachedName="CalendarYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[CalendarSemester]"
+                      cachedDataType="ui1"
+                      cachedName="CalendarSemester"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarSemester]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarSemester]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FiscalQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="FiscalQuarter"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalQuarter]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalQuarter]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FiscalYear]"
+                      cachedDataType="i2"
+                      cachedName="FiscalYear"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalYear]" />
+                    <inputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].Columns[FiscalSemester]"
+                      cachedDataType="ui1"
+                      cachedName="FiscalSemester"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalSemester]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalSemester]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FullDateAlternateKey]"
+                      dataType="dbDate"
+                      name="FullDateAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfWeek]"
+                      dataType="ui1"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EnglishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpanishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FrenchDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfMonth]"
+                      dataType="ui1"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DayNumberOfYear]"
+                      dataType="i2"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WeekNumberOfYear]"
+                      dataType="ui1"
+                      name="WeekNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SpanishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MonthNumberOfYear]"
+                      dataType="ui1"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CalendarSemester]"
+                      dataType="ui1"
+                      name="CalendarSemester" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalQuarter]"
+                      dataType="ui1"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalYear]"
+                      dataType="i2"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FiscalSemester]"
+                      dataType="ui1"
+                      name="FiscalSemester" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Implementacja_Danych_OLEDB\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.110.97.4.AdventureWorksDW2019.189967]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.110.97.4.AdventureWorksDW2019.189967]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullDateAlternateKey]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullDateAlternateKey]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullDateAlternateKey]"
+                      name="FullDateAlternateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfWeek]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfWeek]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishDayNameOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EnglishDayNameOfWeek]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishDayNameOfWeek]"
+                      name="EnglishDayNameOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishDayNameOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SpanishDayNameOfWeek]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishDayNameOfWeek]"
+                      name="SpanishDayNameOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchDayNameOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FrenchDayNameOfWeek]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchDayNameOfWeek]"
+                      name="FrenchDayNameOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfMonth]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfMonth]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[WeekNumberOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WeekNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[WeekNumberOfYear]"
+                      name="WeekNumberOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EnglishMonthName]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[EnglishMonthName]"
+                      name="EnglishMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SpanishMonthName]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[SpanishMonthName]"
+                      name="SpanishMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchMonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FrenchMonthName]"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FrenchMonthName]"
+                      name="FrenchMonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[MonthNumberOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MonthNumberOfYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[MonthNumberOfYear]"
+                      name="MonthNumberOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarQuarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      name="CalendarYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarSemester]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarSemester]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[CalendarSemester]"
+                      name="CalendarSemester"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalQuarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalQuarter]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalQuarter]"
+                      name="FiscalQuarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalYear]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalYear]"
+                      name="FiscalYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalSemester]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalSemester]"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].Columns[FiscalSemester]"
+                      name="FiscalSemester"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullDateAlternateKey]"
+                      dataType="dbDate"
+                      name="FullDateAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfWeek]"
+                      dataType="ui1"
+                      name="DayNumberOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EnglishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SpanishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FrenchDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchDayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfMonth]"
+                      dataType="ui1"
+                      name="DayNumberOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DayNumberOfYear]"
+                      dataType="i2"
+                      name="DayNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WeekNumberOfYear]"
+                      dataType="ui1"
+                      name="WeekNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="EnglishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SpanishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="SpanishMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="FrenchMonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MonthNumberOfYear]"
+                      dataType="ui1"
+                      name="MonthNumberOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CalendarSemester]"
+                      dataType="ui1"
+                      name="CalendarSemester" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalQuarter]"
+                      dataType="ui1"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalYear]"
+                      dataType="i2"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FiscalSemester]"
+                      dataType="ui1"
+                      name="FiscalSemester" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullDateAlternateKey]"
+                      dataType="dbDate"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullDateAlternateKey]"
+                      name="FullDateAlternateKey" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfWeek]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EnglishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EnglishDayNameOfWeek]"
+                      name="EnglishDayNameOfWeek" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SpanishDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SpanishDayNameOfWeek]"
+                      name="SpanishDayNameOfWeek" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FrenchDayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FrenchDayNameOfWeek]"
+                      name="FrenchDayNameOfWeek" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfMonth]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfYear]"
+                      dataType="i2"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WeekNumberOfYear]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WeekNumberOfYear]"
+                      name="WeekNumberOfYear" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EnglishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EnglishMonthName]"
+                      name="EnglishMonthName" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SpanishMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SpanishMonthName]"
+                      name="SpanishMonthName" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FrenchMonthName]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FrenchMonthName]"
+                      name="FrenchMonthName" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MonthNumberOfYear]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MonthNumberOfYear]"
+                      name="MonthNumberOfYear" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarQuarter]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      dataType="i2"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      name="CalendarYear" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarSemester]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CalendarSemester]"
+                      name="CalendarSemester" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalQuarter]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalQuarter]"
+                      name="FiscalQuarter" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalYear]"
+                      dataType="i2"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalYear]"
+                      name="FiscalYear" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalSemester]"
+                      dataType="ui1"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FiscalSemester]"
+                      name="FiscalSemester" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Implementacja_Danych_OLEDB.Paths[OLE DB Source Output]"
+              endId="Package\Implementacja_Danych_OLEDB\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Implementacja_Danych_OLEDB\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Implementacja_Danych_OLEDB"
+          TopLeft="186,83" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Implementacja_Danych_Excel"
+          TopLeft="297,229" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Implementacja_Danych_FlatFile"
+          TopLeft="239,356" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Implementacja_Danych_OLEDB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Implementacja_Danych_OLEDB\OLE DB Source"
+          TopLeft="259,152" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Implementacja_Danych_OLEDB\Flat File Destination"
+          TopLeft="561,307" />
+        <EdgeLayout
+          Id="Package\Implementacja_Danych_OLEDB.Paths[OLE DB Source Output]"
+          TopLeft="334,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="313,113"
+              Start="0,0"
+              End="313,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.5"
+                    Point2="0,56.5"
+                    Point3="4,56.5" />
+                  <mssgle:LineSegment
+                    End="309,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="309,56.5"
+                    Point2="313,56.5"
+                    Point3="313,60.5" />
+                  <mssgle:LineSegment
+                    End="313,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Implementacja_Danych_OLEDB\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Implementacja_Danych_Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Implementacja_Danych_Excel\Excel Source"
+          TopLeft="153,83" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Implementacja_Danych_Excel\OLE DB Destination"
+          TopLeft="367,223" />
+        <EdgeLayout
+          Id="Package\Implementacja_Danych_Excel.Paths[Excel Source Output]"
+          TopLeft="222.5,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230,98"
+              Start="0,0"
+              End="230,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="4,49" />
+                  <mssgle:LineSegment
+                    End="226,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226,49"
+                    Point2="230,49"
+                    Point3="230,53" />
+                  <mssgle:LineSegment
+                    End="230,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Implementacja_Danych_Excel\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Implementacja_Danych_Excel\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Implementacja_Danych_FlatFile">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Implementacja_Danych_FlatFile\Flat File Source"
+          TopLeft="164,106" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Implementacja_Danych_FlatFile\OLE DB Destination"
+          TopLeft="271.5,225.5" />
+        <EdgeLayout
+          Id="Package\Implementacja_Danych_FlatFile.Paths[Flat File Source Output]"
+          TopLeft="239.5,148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="117.5,77.5"
+              Start="0,0"
+              End="117.5,70">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.75"
+                    Point2="0,38.75"
+                    Point3="4,38.75" />
+                  <mssgle:LineSegment
+                    End="113.5,38.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="113.5,38.75"
+                    Point2="117.5,38.75"
+                    Point3="117.5,42.75" />
+                  <mssgle:LineSegment
+                    End="117.5,70" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Implementacja_Danych_FlatFile\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
